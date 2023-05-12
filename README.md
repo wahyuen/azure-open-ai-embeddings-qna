@@ -21,6 +21,7 @@ Please be aware that you need:
 -   an existing OpenAI with deployed models (instruction models e.g. text-davinci-003, and embeddings models e.g. text-search-davinci-doc-001 and text-search-davinci-query-001) 
 -   an existing Form Recognizer Resource (OPTIONAL - if you want to extract text out of documents)
 -   an existing Translator Resource (OPTIONAL - if you want to translate documents)
+-   Make sure that the WebApp site is using dockerhub public container misterflowers/videosolacc:latest in the WebApp Deployment Center menu.
 
 ## Run everything locally in Docker (WebApp + Redis Stack + Batch Processing)
 
