@@ -149,6 +149,54 @@
         "description": "Translator Region"
       }
     },
+    "VideoAccountId": {
+      "type": "string",
+      "metadata": {
+        "description": "Your Video Indexer Account ID"
+      }
+    },    
+    "VideoLocation": {
+      "type": "string",
+      "metadata": {
+        "description": "Your Video Indexer Region"
+      }
+    },     
+    "VideoAccountName": {
+      "type": "string",
+      "metadata": {
+        "description": "Your Video Indexer Account Name"
+      }
+    },    
+    "VideoResourceGroup": {
+      "type": "string",
+      "metadata": {
+        "description": "Your Video Indexer Account Resource Group"
+      }
+    },  
+    "VideoClientId": {
+      "type": "string",
+      "metadata": {
+        "description": "Client ID of the Service Principal with Contributor Access to Video Indexer"
+      }
+    },     
+    "VideoClientSecret": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Client Secret of the Service Principal with Contributor Access to Video Indexer"
+      }
+    },         
+    "TenantId": {
+      "type": "string",
+      "metadata": {
+        "description": "Tenant ID that the Service Principal is registered to"
+      }
+    }, 
+    "SubscriptionId": {
+      "type": "string",
+      "metadata": {
+        "description": "Subscription ID where Video Indexer is deployed to"
+      }
+    }, 
     "newGuid": {
       "type": "string",
       "defaultValue": "[newGuid()]"
@@ -491,7 +539,15 @@
         "TRANSLATE_ENDPOINT": "[parameters('TranslateEndpoint')]",
         "TRANSLATE_KEY": "[parameters('TranslateKey')]",
         "TRANSLATE_REGION": "[parameters('TranslateRegion')]",
-        "CONVERT_ADD_EMBEDDINGS_URL": "[concat('https://', parameters('FunctionName') , '.azurewebsites.net/api/BatchStartProcessing?code=', variables('ClientKey'))]"
+        "CONVERT_ADD_EMBEDDINGS_URL": "[concat('https://', parameters('FunctionName') , '.azurewebsites.net/api/BatchStartProcessing?code=', variables('ClientKey'))]",
+        "VIDEO_ACCOUNT_ID": "[parameters('VideoAccountId')]",
+        "VIDEO_LOCATION": "[parameters('VideoLocation')]",
+        "VIDEO_ACCOUNT_NAME": "[parameters('VideoAccountName')]",
+        "RG": "[parameters('VideoResourceGroup')]",
+        "CLIENT_ID": "[parameters('VideoClientId')]",
+        "CLIENT_SECRET": "[parameters('VideoClientSecret')]",
+        "TENANT_ID": "[parameters('TenantId')]",
+        "SUBSCRIPTION_ID": "[parameters('SubscriptionId')]"
       }
     },
     {
